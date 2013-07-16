@@ -1,0 +1,3 @@
+<% @stores.each do |store| %>
+  <%= render :partial => 'stores/store', :locals => { :store => store, store_page: false } %>
+<% end %>

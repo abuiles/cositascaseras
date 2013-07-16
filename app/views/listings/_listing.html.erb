@@ -1,0 +1,26 @@
+<div class="box bike">
+  <div class="title" style="background-image: url(<%= image_path 'monster.jpg'%>);">
+    <h2><%= listing.title %></h2>
+  </div>
+  <div class="body">
+    <div class="description">
+      <p><%= listing.description %></p>
+      <div class="price">
+        <span>$<%= listing.price %></span>
+      </div>
+    </div>
+    <div class="info">
+      <div>
+        <!-- <strong>Location</strong> -->
+        <!-- <span><%= listing.location %></span> -->
+      </div>
+      <div>
+        <strong>Type</strong>
+        <span><%= listing.listing_type %></span>
+      </div>
+      <div>
+        <%= link_to('Comprar este producto', '#',:class => 'btn btn-inverse')  %>
+      </div>
+    </div>
+  </div>
+</div>
