@@ -66,7 +66,7 @@ class StoresController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
   def set_store
-    @store = Store.find(params[:id])
+    @store = Store.friendly.find(params[:id])
   end
 
   def set_user
@@ -75,6 +75,6 @@ class StoresController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def store_params
-    params.require(:store).permit(:name)
+    params.require(:store).permit(:name, :store_type, :description, :image, :location)
   end
 end

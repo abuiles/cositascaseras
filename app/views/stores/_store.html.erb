@@ -1,5 +1,5 @@
 <div class="box bike <%= store.store_type %>">
-  <div class="title" style="background-image: url(<%= image_path 'cupcake.jpg'%>);">
+  <div class="title" style="background-image: url(<%= store.image.url %>);">
       <h2><%= store.name %></h2>
   </div>
   <div class="body">
@@ -12,7 +12,7 @@
         </div>
         <div class="info">
             <div>
-                <strong>Location</strong>
+                <strong>Ciudad</strong>
                 <span><%= store.location %></span>
             </div>
             <div>
@@ -20,7 +20,13 @@
               <span><%= store.store_type %></span>
             </div>
             <div>
-              <%= link_to('Visita esta tienda', store_path(store),:class => 'btn btn-inverse') unless store_page%>
+              <% if store_page %>
+                <% if current_user && store.admin?(current_user) %>
+                  <%= link_to('Editar mi tienda', edit_store_path(store),:class => 'btn btn-inverse') %>
+                <% end %>
+              <% else %>
+                <%= link_to('Visita esta tienda', store_path(store),:class => 'btn btn-inverse') %>
+              <% end %>
             </div>
         </div>
     </div>

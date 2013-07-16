@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 class Listing < ActiveRecord::Base
+  mount_uploader :image, ImageUploader
   belongs_to :store
 
-  def description
-    "Vendemos cupcakes y pasteles de todos los colores y sabores Vendemos cupcakes y pasteles de todos los colores y sabores"
-  end
+  extend FriendlyId
+  friendly_id :title_store, :use => :scoped, :scope => :store
 
-  def price
-    1000
+  def title_store
+    "#{title} de #{store.name_location}"
   end
 
   def location

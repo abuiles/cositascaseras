@@ -11,15 +11,13 @@
     </div>
     <div class="info">
       <div>
-        <!-- <strong>Location</strong> -->
-        <!-- <span><%= listing.location %></span> -->
       </div>
       <div>
-        <strong>Type</strong>
+        <strong>Tipo</strong>
         <span><%= listing.listing_type %></span>
       </div>
       <div>
-        <%= link_to('Comprar este producto', '#',:class => 'btn btn-inverse')  %>
+        <%= link_to('Comprar este producto', listing_path(listing),:class => 'btn btn-inverse')  %>
       </div>
     </div>
   </div>

@@ -53,3 +53,5 @@ gem "twitter-bootstrap-rails"
 gem "devise", "~> 3.0.0"
 gem "mixpanel", "~> 4.0.2"
 gem 'rails_12factor'
+gem "carrierwave", "~> 0.9.0"
+gem "friendly_id", git: "https://github.com/FriendlyId/friendly_id.git"
