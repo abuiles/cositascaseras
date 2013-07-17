@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name, 'Nombre' %><br>
+    <%= f.label :name, 'Nombre de tu tienda' %><br>
     <%= f.text_field :name %>
   </div>
 
@@ -26,8 +26,33 @@
   </div>
 
   <div class="field">
+    <%= f.label :address, 'Dirección' %><br>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number, 'Número telefónico' %><br>
+    <%= f.text_field :phone_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contact_email, 'Email de contacto' %><br>
+    <%= f.text_field :contact_email %>
+  </div>
+
+  <div class="field">
     <%= f.label :location, 'Ciudad' %><br>
     <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :delivery_options, 'Formas de envío' %><br>
+    <%= f.text_area :delivery_options %>
+  </div>
+
+  <div class="field">
+    <%= f.label :payment_options, 'Formas de pago' %><br>
+    <%= f.text_area :payment_options %>
   </div>
 
   <div class="field">
@@ -36,6 +61,6 @@
     <%= f.hidden_field :image_cache %>
   </div>
 
-  <%= f.submit 'Crear tienda' %>
+  <%= f.submit 'Guardar' %>
   </div>
 <% end %>

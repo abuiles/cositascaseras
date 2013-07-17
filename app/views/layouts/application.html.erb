@@ -62,14 +62,10 @@
         <nav>
           <!-- <li class="selected"><a href="/">Tiendas</a></li> -->
           <li><%= link_to('Tiendas', stores_path) %></li>
-          <% if current_user %>
-            <% if current_user.store.present? %>
-              <li><%= link_to('Mi Tienda', user_store_path(current_user, current_user.store)) %></li>
-            <% else %>
-              <li><%= link_to('Crear tienda', new_user_store_path(current_user)) %></li>
-             <% end %>
+          <% if current_user && current_user.store.present? %>
+            <li><%= link_to('Mi Tienda', user_store_path(current_user, current_user.store)) %></li>
           <% else %>
-            <li><%= link_to('Listar mis productos', new_user_registration_path(create_store: 1)) %></li>
+            <li><%= link_to('Crear tienda', new_store_path) %></li>
           <% end  %>
         </nav>
       </div>
