@@ -1,7 +1,13 @@
 Cositas::Application.routes.draw do
   devise_for :users
 
-  resources :listings
+  get '/about' => "pages#about"
+  get '/contact' => "pages#contact"
+  get '/privacy' => "pages#privacy"
+
+  resources :listings do
+    get 'add_to_car', on: :member
+  end
 
   resources :stores do
     resources :listings

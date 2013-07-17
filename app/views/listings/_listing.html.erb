@@ -11,13 +11,18 @@
     </div>
     <div class="info">
       <div>
-      </div>
-      <div>
         <strong>Tipo</strong>
         <span><%= listing.listing_type %></span>
       </div>
       <div>
-        <%= link_to('Comprar este producto', listing_path(listing),:class => 'btn btn-inverse')  %>
+        <% if current_user && listing.store.admin?(current_user) %>
+          <%= link_to('Editar producto', edit_listing_path(listing)) %>
+        <% else %>
+          <%= link_to('Ver más información', listing_path(listing)) %>
+        <% end %>
+      </div>
+      <div>
+        <%= link_to('Agregar a mi canasta', add_to_car_listing_path(listing), :class => 'btn btn-inverse')  %>
       </div>
     </div>
   </div>

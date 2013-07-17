@@ -2,6 +2,12 @@ class ListingsController < ApplicationController
   before_action :set_listing, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, only: [:edit, :update, :destroy, :create]
 
+  def add_to_car
+    @listing = Listing.friendly.find(params[:id])
+    session[:car] ||= []
+    session[:car] << @listing
+    redirect_to :back, notice: "Producto agregado!"
+  end
   # GET /listings
   # GET /listings.json
   def index
