@@ -55,7 +55,8 @@
             <% else %>
               <li><%= link_to('Crear tienda', new_store_path) %></li>
             <% end  %>
-            <li><%= link_to('Log out', destroy_user_session_path) %></li>
+            <li><%= link_to "Cerrar Sesión",
+          destroy_user_session_path, :method=> :delete, :data => { :confirm => '¿Estás seguro?' } %></li>
           <% else %>
             <li><%= link_to('log in', new_user_session_path) %></li>
             <li><%= link_to('sign up', new_user_registration_path) %></li>
