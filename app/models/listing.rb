@@ -5,7 +5,7 @@ class Listing < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title_store, :use => :scoped, :scope => :store
 
-  validates_presence_of :title, :description, :price
+  validates_presence_of :title# , :description, :price
 
   belongs_to :store
 

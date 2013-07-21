@@ -5,7 +5,7 @@ class Store < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name_location, use: :slugged
 
-  validates_presence_of :name, :store_type, :description, :image, :location, :phone_number, :contact_email, :delivery_options, :payment_options
+  validates_presence_of :name, :store_type, :description, :image, :location# , :phone_number, :contact_email, :delivery_options, :payment_options
 
   has_many :listings
   belongs_to :user
