@@ -1,9 +1,9 @@
-<div class="box bike <%= store.store_type %>">
+<div class="box bike">
   <div class="title" style="background-image: url(<%= store.image.url %>);">
-      <h2><%= store.name %></h2>
   </div>
   <div class="body">
-        <div class="description">
+    <h3><%= store.name %></h3>
+    <div class="description">
             <p><%= store.description %></p>
             <% show_details ||= false %>
             <div class="price">
