@@ -1,7 +1,7 @@
 Cositas::Application.routes.draw do
   devise_for :users
 
-  get '/about' => "pages#about"
+  get '/about' => "pages#about", as: :about
   get '/contact' => "pages#contact"
   get '/privacy' => "pages#privacy"
 

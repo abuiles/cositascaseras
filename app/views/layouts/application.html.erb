@@ -68,7 +68,7 @@
           <!-- <li class="selected"><a href="/">Tiendas</a></li> -->
           <li><%= link_to('Tiendas', stores_path) %></li>
           <!-- <li><%= link_to('Canaste de cositas', "#") %></li> -->
-          <li><%= link_to('Cómo comprar', "#") %></li>
+          <!-- <li><%= link_to('Cómo comprar', "#") %></li> -->
         </nav>
       </div>
     </header>
@@ -79,7 +79,9 @@
     </section>
     <footer>
       <div>
-	<p>Copyright &copy; 2013. <a href="http://www.cositascaseras.com/">Cositas Caseras</a>.</p>
+	<p>Copyright &copy;
+	2013. <a href="http://www.cositascaseras.com/">Cositas
+	Caseras</a> | <%= link_to 'Privacidad', about_path %>.</p>
       </div>
     </footer>
 
