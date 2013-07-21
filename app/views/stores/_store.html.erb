@@ -5,10 +5,15 @@
   <div class="body">
         <div class="description">
             <p><%= store.description %></p>
-            <!-- <div class="price"> -->
-            <!--   <span><%= store.price ? store.price/100 : 10 %></span> -->
-            <!--   per day -->
-            <!-- </div> -->
+            <% show_details ||= false %>
+            <div class="price">
+              <% if show_details %>
+                <%= store.address %> - <%= store.phone_number %> -
+                <%= store.contact_email %>
+              <% else %>
+                <%= pluralize(store.listings.count, 'producto') %>
+              <% end %>
+            </div>
         </div>
         <div class="info">
             <div>
@@ -23,6 +28,8 @@
               <% if store_page %>
                 <% if current_user && store.admin?(current_user) %>
                   <%= link_to('Editar mi tienda', edit_store_path(store),:class => 'btn btn-inverse') %>
+                <% else %>
+                  <%= link_to('Ver detalles de la tienda', '#', :class => 'btn btn-inverse')  %>
                 <% end %>
               <% else %>
                 <%= link_to('Visita esta tienda', store_path(store),:class => 'btn btn-inverse') %>
