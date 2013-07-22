@@ -1,9 +1,9 @@
 Cositas::Application.routes.draw do
   devise_for :users
 
-  get '/about' => "pages#about", as: :about
-  get '/contact' => "pages#contact"
-  get '/privacy' => "pages#privacy"
+  get '/acerca_de' => "pages#about", as: :about
+  get '/contacto' => "pages#contact", as: :contact
+  get '/privacidad' => "pages#privacy", as: :privacy
 
   resources :listings do
     get 'add_to_car', on: :member

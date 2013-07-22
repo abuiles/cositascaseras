@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:edit, :update, :destroy, :create]
+  before_action :authenticate_user!, only: [:index, :edit, :update, :destroy, :create]
 
   def add_to_car
     @listing = Listing.friendly.find(params[:id])

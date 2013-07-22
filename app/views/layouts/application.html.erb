@@ -4,7 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Cositas Caseras" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Cositas Caseras | Artesanías de Colombia" %></title>
+    <meta name="description" content = "Directorio de productos hechos en casa por artesanos en Medellín. Encuentre tortas, postres, dulces tradicionales, comida orgánica y natural, bisutería, accesorios, tejidos y otras manualidades." />
+
+  <meta property="og:title" content="Cositas Caseras"/>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cositas Caseras"/>
+  <meta property="og:url" content="http://www.cositascaseras.com"/>
+  <meta property="og:description" content="Directorio de productos hechos en casa por artesanos. Encuentre tortas, postres, dulces tradicionales, comida orgánica y natural, bisutería, accesorios, tejidos y otras manualidades." />
+
+
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -40,7 +49,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-41286750-1', 'cositascaseras.co');
+      ga('create', 'UA-41286750-1', 'cositascaseras.com');
       ga('send', 'pageview');
     </script>
   </head>
@@ -82,7 +91,7 @@
       <div>
 	<p>Copyright &copy;
 	2013. <a href="http://www.cositascaseras.com/">Cositas
-	Caseras</a> | <%= link_to 'Privacidad', about_path %>.</p>
+	Caseras</a>| <%= link_to 'Acerca del sitio', about_path %>| <%= link_to 'Contacto', contact_path %> | <%= link_to 'Privacidad', privacy_path %>.</p>
       </div>
     </footer>
 
