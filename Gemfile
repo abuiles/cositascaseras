@@ -58,6 +58,6 @@ gem "friendly_id", git: "https://github.com/FriendlyId/friendly_id.git"
 gem "fog", "~> 1.3.1"
 
 
-group :production, :development do
+group :production do
   gem "sitemap_generator", "~> 4.1.1"
 end
