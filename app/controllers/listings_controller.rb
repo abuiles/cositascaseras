@@ -11,7 +11,7 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
+    @listings = current_user.store.listings
   end
 
   # GET /listings/1
