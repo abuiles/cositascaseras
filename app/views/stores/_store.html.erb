@@ -7,7 +7,7 @@
             <p><%= store.description %></p>
             <% show_details ||= false %>
             <div class="price">
-              <% if show_details %>
+              <% if store_page || show_details %>
                 <%= store.address %> - <%= store.phone_number %> -
                 <%= store.contact_email %>
               <% else %>
