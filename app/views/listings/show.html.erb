@@ -1,3 +1,4 @@
 <%= render :partial => 'listings/listing', :locals => { :listing => @listing } %>
 
+<%= render "partials/mailchimp",  { store: @listing.store } %>
 <%= link_to('Regresar a la tienda', store_path(@listing.store),:class => 'btn btn-inverse') %>
