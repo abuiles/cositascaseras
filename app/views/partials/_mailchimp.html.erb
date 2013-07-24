@@ -29,7 +29,7 @@
 	<input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
       </div>
       <div class="mc-custom-field-group">
-	<input type="hidden" value="<%= store.name %>" name="STORE" class="" id="mce-STORE">
+	<input type="hidden" value="<%= store ? store.name : "" %>" name="STORE" class="" id="mce-STORE">
       </div>
       <p>Powered by <a href="http://eepurl.com/CLILX" title="MailChimp - email marketing made easy and fun">MailChimp</a></p>
 
